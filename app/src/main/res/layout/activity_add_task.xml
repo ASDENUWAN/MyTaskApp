@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".AddTask">
+
+    <TextView
+        android:id="@+id/addTaskHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+
+        android:fontFamily="@font/poppins"
+        android:text="Add Task"
+        android:textColor="@color/blue"
+        android:textSize="24dp" />
+
+    <ImageView
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/addTaskHeading"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="6dp"
+        android:src="@drawable/done_icon" />
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/addTaskHeading"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/blue_border"
+        android:fontFamily="@font/poppins"
+        android:hint="Enter the name"
+        android:maxLines="1"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/selectDateText"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/nameEditText"
+        android:text="Select Date:"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        />
+    <Button
+        android:id="@+id/datePickerButton"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/selectDateText"
+        android:text="JAN 01 2020"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        style="?android:spinnerStyle"
+        android:onClick="openDatePicker"/>
+    <TextView
+        android:id="@+id/selectPnum"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/datePickerButton"
+        android:text="Select priority:"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        />
+    <Spinner
+        android:id="@+id/pnum_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/selectPnum"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/blue_border"
+        android:fontFamily="@font/poppins"
+        android:prompt="@string/priority_prompt"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/desEditText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/pnum_spinner"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/blue_border"
+        android:fontFamily="@font/poppins"
+        android:gravity="top"
+        android:hint="Enter the description"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>
